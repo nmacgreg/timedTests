@@ -17,7 +17,7 @@ print "Products to $maxProduct\n";
 print "Division questions to $maxDiv\n" if defined $maxDiv;
 print "\n";
 
-my ($maxQuestions, $randA, $randB ); 
+my ($maxQuestions, $randA, $randB, $randC ); 
 for ($maxQuestions = 1; $maxQuestions<31; $maxQuestions++) {
 	do {
 		# New requirement: questions like 3x16=38 are "too hard".  The rubric says "hardest question: 7x7".
@@ -26,7 +26,12 @@ for ($maxQuestions = 1; $maxQuestions<31; $maxQuestions++) {
 	} while (($randA * $randB >= $maxProduct) || $randA < $roundDownTo || $randB < $roundDownTo );
 
 	if ((defined $maxDiv) and (($randA * $randB) <= $maxDiv)) { 
-		print "$maxQuestions. " . $randA * $randB .  " % $randB =\n";
+		$randC=int(rand(2));
+		if ( $randC == 1  ) {
+			print "$maxQuestions. " . $randA * $randB .  " % $randB =\n";
+		}else {
+			print "$maxQuestions. $randA x $randB =\n";
+		}
 	} else {
 		print "$maxQuestions. $randA x $randB =\n";
 	}
