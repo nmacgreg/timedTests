@@ -16,3 +16,13 @@ This week's goal is "Most challenging question: 7x7 &  12/4"
 This week, we're adding division questions, controllable with the new maxDiv parameter.
 Is this a bug?  All questions less than or equal to the new "--maxDiv" parameter are printed as division questions.
 Eventually this will be a problem. 
+
+Jan 15, 2019
+This week, at level 13, we transitioned up to maxProduct=81, but my son only got 50% in the in-class test. 
+He complained that the in-class test had many questions from the 9-times-tables, but this code produced tests
+that were not focussed on the 9-times-tables.  The list of possible questions has grown greatly, so by percentage, 
+the number of questions from the 9-times-tables has fallen.  I added t3.pl to address this, attempting to select 
+fully one-third of the questions from the sqrt of the highest multiplier.  I bumped the minimum to 3, so no more 
+2 x 2 or 2 x 8.  It's going to be hard to write code that's generic, this won't work at levle 19 and above. 
+
+
