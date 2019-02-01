@@ -28,7 +28,7 @@ for ($maxQuestions = 1; $maxQuestions<31; $maxQuestions++) {
 	if ((defined $maxDiv) and (($randA * $randB) <= $maxDiv)) { 
 		$randC=int(rand(2));
 		if ( $randC == 1  ) {
-			print "$maxQuestions. " . $randA * $randB .  " % $randB =\n";
+			print "$maxQuestions. " . $randA * $randB .  " ÷ $randB =\n";
 		}else {
 			print "$maxQuestions. $randA x $randB =\n";
 		}
