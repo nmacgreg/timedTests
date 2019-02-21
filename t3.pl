@@ -3,6 +3,7 @@
 
 #use taint; 
 use strict; 
+use POSIX;
 use Getopt::Long; 
 my $maxProduct = 42;  						# Declare a variable & set a default
 my $maxDiv;
@@ -17,7 +18,7 @@ print "Products to $maxProduct\n";
 print "Division questions to $maxDiv\n" if defined $maxDiv;
 print "\n";
 
-my $maxQuotient = sqrt $maxProduct;  # put some emphasis on the newest times-tables level
+my $maxQuotient = floor sqrt $maxProduct;  # put some emphasis on the newest times-tables level
 
 my ($maxQuestions, $randA, $randB, $randC, $randD ); 
 for ($maxQuestions = 1; $maxQuestions<31; $maxQuestions++) {
